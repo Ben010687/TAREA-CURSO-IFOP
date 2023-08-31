@@ -1,0 +1,35 @@
+---
+title: "Trabajo evaluación para curso Investigación Reproducible en R"
+author:
+- familyname: Suárez
+  othernames: Benjamín
+  qualifications: Investigador Semi Senior, M.Sc.
+email: benjamin.suarez@ifop.cl
+phone: +56 (9) 84076146
+department: Departamento de\newline Evaluación de\newline Pesquerías
+organization: Instituto de Fomento Pesquero
+number-sections: true
+fig-height: 5
+fig-width: 8
+cite-method: biblatex
+bibliography: references.bib
+biblio-style: authoryear-comp
+linestretch: 1.5
+format: report-pdf
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Métodos
+
+## Estimador de capturas por pesquería
+
+\dots para estimar la captura total, retenida y descartada en cada pesquería, se utilizaron estimadores diseño-basados, asociados a un diseño de muestreo estratificado de conglomerados bietápico, en donde la unidad de primera etapa fue el viaje y la unidad de segunda etapa fue el lance de pesca. El estimador utilizado es insesgado e hizo referencia a la captura total, retenida o descartada en el estrato según la variable analizada:
+
+$$
+ Y_{h} = N_{h}*\frac{1}{n_{h}} \sum_{i=1}^{n_{h}} M_{hi}*\frac{1}{m_{hi}} \sum_{j=1}^{m_{hi}} Y_{hij}
+$$ {#eq-s3}
+
+Donde $n_{h}$ es el número de viajes muestreados en el estrato h, $N_{h}$ es el número total de viajes realizados en el estrato h (también conocido como factor de expansión de primera etapa), $m_{hi}$ es el número total de lances en la muestra del viaje i del estrato h, $M_{hi}$ es el número total de lances en el viaje i del estrato h (factor de expansión de segunda etapa) e $Y_{hij}$ es la captura del lance j en el viaje i del estrato h. 
